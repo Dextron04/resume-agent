@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "project_number": 3,
+    "total_projects": 25,
+    "user_name": "Tushin Kulshreshtha",
+    "generated_timestamp": "2025-08-17T14:42:18.603976",
+    "generator": "GitHub Portfolio Maker"
+  },
+  "project": {
+    "title": "get-me-a-fucking-job",
+    "summary": "**Project Overview:**\n\"get-me-a-fucking-job\" is an advanced automated job search and resume analysis platform that leverages AI and machine learning to optimize job hunting. The system combines web scraping, natural language processing, and LLM technology to match candidates with ideal job opportunities by analyzing both resumes and job postings in depth.\n\n**Key Features:**\n* Automated LinkedIn job scraping using undetected Selenium for stealth data collection\n* Smart resume parsing and skill extraction using PyMuPDF and spaCy NLP\n* Advanced job matching using TF-IDF vectorization and cosine similarity algorithms\n* Deep analysis of job fit using Google Gemini LLM with personalized recommendations\n* Comprehensive report generation highlighting best matches and career insights\n\n**Technologies Used:**\nPython, Selenium, spaCy NLP, PyMuPDF, scikit-learn, Google Gemini API, BeautifulSoup, pandas, numpy, undetected-chromedriver\n\n**Impact & Benefits:**\nThis tool streamlines the job search process by automating the tedious aspects of job hunting while providing sophisticated analysis of job fit. It helps job seekers focus their efforts on positions where they have the highest chance of success, saving time and improving application targeting efficiency.",
+    "raw_summary": "**Project Overview:**\n\"get-me-a-fucking-job\" is an advanced automated job search and resume analysis platform that leverages AI and machine learning to optimize job hunting. The system combines web scraping, natural language processing, and LLM technology to match candidates with ideal job opportunities by analyzing both resumes and job postings in depth.\n\n**Key Features:**\n* Automated LinkedIn job scraping using undetected Selenium for stealth data collection\n* Smart resume parsing and skill extraction using PyMuPDF and spaCy NLP\n* Advanced job matching using TF-IDF vectorization and cosine similarity algorithms\n* Deep analysis of job fit using Google Gemini LLM with personalized recommendations\n* Comprehensive report generation highlighting best matches and career insights\n\n**Technologies Used:**\nPython, Selenium, spaCy NLP, PyMuPDF, scikit-learn, Google Gemini API, BeautifulSoup, pandas, numpy, undetected-chromedriver\n\n**Impact & Benefits:**\nThis tool streamlines the job search process by automating the tedious aspects of job hunting while providing sophisticated analysis of job fit. It helps job seekers focus their efforts on positions where they have the highest chance of success, saving time and improving application targeting efficiency."
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "profile_summary": {
+    "personal_info": {
+      "name": "Tushin Kulshreshtha",
+      "title": "Software Engineer | Backend & Cloud Developer",
+      "location": "San Francisco, CA",
+      "contact": {
+        "phone": "925-819-4160",
+        "email": "tushink04@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/tushin-kulshreshtha-2522b8231/",
+        "github": "https://github.com/Dextron04",
+        "portfolio": "https://www.dextron04.in/"
+      }
+    },
+    "education": {
+      "university": "San Francisco State University",
+      "degree": "Bachelor of Science in Computer Science",
+      "gpa": "3.95/4.0",
+      "graduation_date": "December 2025",
+      "honors": [
+        "Phi Beta Kappa Honor Society",
+        "Dean's List (All Semesters)"
+      ],
+      "relevant_courses": [
+        "Data Structures & Algorithms",
+        "Database Systems", 
+        "Distributed Systems",
+        "Operating Systems",
+        "Software Engineering"
+      ]
+    },
+    "career_highlights": {
+      "total_experience": "4+ years",
+      "current_roles": [
+        "Software Engineer Intern at SellWizr",
+        "Head VP Assistant at SFSU"
+      ],
+      "key_achievements": [
+        "40% reduction in deployment time through Docker microservices",
+        "60% improvement in workflow optimization using AI systems",
+        "98% code coverage with test-driven development",
+        "85% reduction in security vulnerabilities",
+        "Managed over $500,000 in university funding allocations"
+      ],
+      "leadership_experience": [
+        "Led development teams at Glitter",
+        "Supervised VP Assistant teams at SFSU",
+        "Managed 15+ university committees"
+      ]
+    },
+    "technical_expertise": {
+      "strongest_areas": [
+        "Full-Stack Web Development (React, Node.js, Spring Boot)",
+        "Cloud Infrastructure (AWS EC2, S3, Lambda)",
+        "Database Management (PostgreSQL, MySQL, MongoDB)",
+        "Containerization & DevOps (Docker, Microservices)",
+        "API Development & Security (RESTful APIs, OAuth 2.0, JWT)"
+      ],
+      "programming_languages": ["Python", "Java", "JavaScript", "C", "C++"],
+      "frameworks": ["React", "Next.js", "Django", "Spring Boot"],
+      "databases": ["PostgreSQL", "MySQL", "MongoDB", "Azure SQL"],
+      "cloud_platforms": ["AWS (EC2, S3, Lambda, EKS, CloudWatch)"],
+      "tools": ["Docker", "Git", "Linux", "Temporal", "n8n"]
+    },
+    "industry_focus": [
+      "Enterprise Software Development",
+      "AI/ML Integration",
+      "CRM Systems",
+      "Educational Technology",
+      "Security & Authentication"
+    ],
+    "soft_skills": [
+      "Project Management",
+      "Team Leadership",
+      "System Architecture",
+      "Agile Development",
+      "Test-Driven Development"
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "internships": {
+    "total_internships": 4,
+    "last_updated": "2025-08-17",
+    "internship_details": [
+      {
+        "id": 1,
+        "company": "SellWizr",
+        "position": "Software Engineer Intern",
+        "location": "New York, NY",
+        "duration": "June 2025 - Present (3 months)",
+        "status": "Current",
+        "focus_areas": [
+          "Docker & Microservices",
+          "AI Workflow Systems",
+          "Test-Driven Development",
+          "Enterprise CRM"
+        ],
+        "key_technologies": ["Docker", "Temporal", "n8n", "Microservices"],
+        "measurable_impact": [
+          "40% reduction in deployment time",
+          "60% workflow optimization improvement",
+          "98% code coverage achieved",
+          "70% reduction in production defects"
+        ]
+      },
+      {
+        "id": 2,
+        "company": "Site Service Software Inc.",
+        "position": "Software Engineer Intern",
+        "location": "New York, NY / San Francisco, CA",
+        "duration": "August 2024 - April 2025 (9 months)",
+        "status": "Completed",
+        "focus_areas": [
+          "Full-Stack Migration",
+          "Security Implementation",
+          "API Development",
+          "Performance Optimization"
+        ],
+        "key_technologies": ["React", "Spring Boot", "PostgreSQL", "OAuth 2.0", "JWT", "RESTful APIs"],
+        "measurable_impact": [
+          "40% performance improvement through migration",
+          "85% reduction in security vulnerabilities",
+          "30% reduction in API response times",
+          "20+ RESTful APIs developed"
+        ]
+      },
+      {
+        "id": 3,
+        "company": "meetX",
+        "position": "AI Intern",
+        "location": "Remote/Not specified",
+        "duration": "February 2025 - June 2025 (5 months)",
+        "status": "Completed",
+        "focus_areas": [
+          "Artificial Intelligence",
+          "Machine Learning Applications"
+        ],
+        "key_technologies": ["AI/ML Technologies"],
+        "measurable_impact": ["AI-focused development experience"]
+      }
+    ],
+    "internship_progression": {
+      "career_growth": [
+        "Started with AI-focused role at meetX (Feb-June 2025)",
+        "Advanced to full-stack development at Site Service Software (Aug 2024-Apr 2025)",
+        "Currently leading enterprise-level projects at SellWizr (June 2025-Present)"
+      ],
+      "technical_evolution": [
+        "Initial focus on AI/ML technologies",
+        "Expanded to full-stack web development",
+        "Advanced to microservices and enterprise architecture",
+        "Current focus on containerization and workflow automation"
+      ],
+      "responsibility_growth": [
+        "Individual contributor role in AI development",
+        "Full-stack developer with security focus",
+        "Current role involving infrastructure and team practices"
+      ]
+    },
+    "skills_gained_through_internships": [
+      "Enterprise-level software development",
+      "Docker containerization and microservices",
+      "Security implementation (OAuth 2.0, JWT, OWASP)",
+      "Performance optimization techniques",
+      "AI workflow automation",
+      "Test-driven development practices",
+      "API design and development",
+      "Database optimization",
+      "Cloud platform integration"
+    ],
+    "industries_experienced": [
+      "Enterprise CRM Software",
+      "AI/Machine Learning",
+      "Full-Stack Web Development",
+      "Software Services"
+    ]
+  }
+}

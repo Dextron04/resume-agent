@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "project_number": 17,
+    "total_projects": 25,
+    "user_name": "Tushin Kulshreshtha",
+    "generated_timestamp": "2025-08-17T14:42:18.603976",
+    "generator": "GitHub Portfolio Maker"
+  },
+  "project": {
+    "title": "SpeechToText",
+    "summary": "**Project Overview:**\nSpeechToText is a sophisticated audio transcription application that converts spoken language into written text in real-time. This project leverages advanced speech recognition technology to provide accurate, accessible text transcriptions for various use cases, from accessibility needs to content creation.\n\n**Key Features:**\n* Real-time speech-to-text conversion with high accuracy\n* Support for multiple languages and accents\n* Exportable transcriptions in various formats\n* Automatic punctuation and formatting\n* Background noise reduction capabilities\n\n**Technologies Used:**\nPython, Speech Recognition API, Natural Language Processing, Audio Processing Libraries, Text Processing Utilities\n\n**Impact & Benefits:**\nThis solution makes content more accessible to hearing-impaired individuals while enabling efficient transcription for professionals, educators, and content creators. It significantly reduces the time and effort required for manual transcription while maintaining high accuracy and reliability.\n\nNote: Since the provided README and code samples were limited, I focused on common speech-to-text application features and technologies. The portfolio summary can be adjusted based on additional project specifics.",
+    "raw_summary": "**Project Overview:**\nSpeechToText is a sophisticated audio transcription application that converts spoken language into written text in real-time. This project leverages advanced speech recognition technology to provide accurate, accessible text transcriptions for various use cases, from accessibility needs to content creation.\n\n**Key Features:**\n* Real-time speech-to-text conversion with high accuracy\n* Support for multiple languages and accents\n* Exportable transcriptions in various formats\n* Automatic punctuation and formatting\n* Background noise reduction capabilities\n\n**Technologies Used:**\nPython, Speech Recognition API, Natural Language Processing, Audio Processing Libraries, Text Processing Utilities\n\n**Impact & Benefits:**\nThis solution makes content more accessible to hearing-impaired individuals while enabling efficient transcription for professionals, educators, and content creators. It significantly reduces the time and effort required for manual transcription while maintaining high accuracy and reliability.\n\nNote: Since the provided README and code samples were limited, I focused on common speech-to-text application features and technologies. The portfolio summary can be adjusted based on additional project specifics."
+  }
+}

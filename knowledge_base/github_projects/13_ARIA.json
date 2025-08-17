@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "project_number": 13,
+    "total_projects": 25,
+    "user_name": "Tushin Kulshreshtha",
+    "generated_timestamp": "2025-08-17T14:42:18.603976",
+    "generator": "GitHub Portfolio Maker"
+  },
+  "project": {
+    "title": "ARIA",
+    "summary": "**Project Overview:**\nARIA-Ears is a sophisticated voice-to-text transcription module designed as the foundational component of the SUMI voice assistant ecosystem. This real-time audio processing system leverages advanced machine learning models to convert spoken language into accurate text transcriptions, creating a bridge between verbal communication and digital interaction.\n\n**Key Features:**\n* Real-time audio capture and processing from microphone input\n* High-accuracy speech transcription powered by Whisper AI technology\n* Modular architecture designed for seamless integration with other voice assistant components\n* Flexible model selection with support for both lightweight and advanced transcription engines\n* Cross-platform compatibility with extensive hardware support\n\n**Technologies Used:**\nPython 3.8+, PyTorch, Transformers, Whisper AI, Librosa, Git\n\n**Impact & Benefits:**\nARIA-Ears addresses the growing need for reliable voice-to-text conversion in modern applications, from accessibility tools to voice assistants. Its modular design and focus on accuracy make it an ideal solution for developers building voice-enabled applications while maintaining flexibility for different computational resources and use cases.",
+    "raw_summary": "**Project Overview:**\nARIA-Ears is a sophisticated voice-to-text transcription module designed as the foundational component of the SUMI voice assistant ecosystem. This real-time audio processing system leverages advanced machine learning models to convert spoken language into accurate text transcriptions, creating a bridge between verbal communication and digital interaction.\n\n**Key Features:**\n* Real-time audio capture and processing from microphone input\n* High-accuracy speech transcription powered by Whisper AI technology\n* Modular architecture designed for seamless integration with other voice assistant components\n* Flexible model selection with support for both lightweight and advanced transcription engines\n* Cross-platform compatibility with extensive hardware support\n\n**Technologies Used:**\nPython 3.8+, PyTorch, Transformers, Whisper AI, Librosa, Git\n\n**Impact & Benefits:**\nARIA-Ears addresses the growing need for reliable voice-to-text conversion in modern applications, from accessibility tools to voice assistants. Its modular design and focus on accuracy make it an ideal solution for developers building voice-enabled applications while maintaining flexibility for different computational resources and use cases."
+  }
+}

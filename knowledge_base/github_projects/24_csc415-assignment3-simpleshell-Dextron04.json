@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "project_number": 24,
+    "total_projects": 25,
+    "user_name": "Tushin Kulshreshtha",
+    "generated_timestamp": "2025-08-17T14:42:18.603976",
+    "generator": "GitHub Portfolio Maker"
+  },
+  "project": {
+    "title": "csc415-assignment3-simpleshell-Dextron04",
+    "summary": "**Project Overview:**\nA custom Linux shell implementation that supports command execution, piping, and process management. This interactive shell allows users to execute system commands with arguments, handle multiple piped commands, and provides detailed process execution feedback, offering a practical demonstration of Unix/Linux system programming concepts.\n\n**Key Features:**\n* Custom command prompt with configurable prefix\n* Support for multiple piped commands (e.g., `cmd1 | cmd2 | cmd3`)\n* Process execution tracking with child PID and exit status reporting\n* Robust command parsing with support for multiple arguments\n* Graceful error handling and EOF condition management\n\n**Technologies Used:**\nC, Linux System Calls (fork, exec, pipe, wait), Process Management, File Descriptors, Make Build System\n\n**Impact & Benefits:**\nThis project provides hands-on experience with fundamental operating system concepts including process creation, inter-process communication, and system call usage. It serves as an educational tool for understanding how shells work and demonstrates practical implementation of process management in Unix-like systems.",
+    "raw_summary": "**Project Overview:**\nA custom Linux shell implementation that supports command execution, piping, and process management. This interactive shell allows users to execute system commands with arguments, handle multiple piped commands, and provides detailed process execution feedback, offering a practical demonstration of Unix/Linux system programming concepts.\n\n**Key Features:**\n* Custom command prompt with configurable prefix\n* Support for multiple piped commands (e.g., `cmd1 | cmd2 | cmd3`)\n* Process execution tracking with child PID and exit status reporting\n* Robust command parsing with support for multiple arguments\n* Graceful error handling and EOF condition management\n\n**Technologies Used:**\nC, Linux System Calls (fork, exec, pipe, wait), Process Management, File Descriptors, Make Build System\n\n**Impact & Benefits:**\nThis project provides hands-on experience with fundamental operating system concepts including process creation, inter-process communication, and system call usage. It serves as an educational tool for understanding how shells work and demonstrates practical implementation of process management in Unix-like systems."
+  }
+}

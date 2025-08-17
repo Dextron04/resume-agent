@@ -1,0 +1,138 @@
+{
+  "work_experience": {
+    "total_positions": 5,
+    "last_updated": "2025-08-17",
+    "positions": [
+      {
+        "id": 1,
+        "company": "SellWizr",
+        "position": "Software Engineer Intern",
+        "location": "New York, NY",
+        "duration": {
+          "start_date": "June 2025",
+          "end_date": "Present",
+          "total_duration": "3 months"
+        },
+        "type": "Internship",
+        "status": "Current",
+        "description": [
+          "Engineered Docker-based microservices infrastructure for enterprise CRM, implementing containerization patterns that reduced deployment time by 40% and improved scalability",
+          "Designed and developed a complex AI workflow system implementing the use of temporal and n8n, improving workflow optimization by 60%",
+          "Implemented test-driven development practices in agile cycles, achieving 98% code coverage and 70% reduction in production defects"
+        ],
+        "technologies": ["Docker", "Microservices", "CRM", "AI Workflow", "Temporal", "n8n", "Test-Driven Development"],
+        "achievements": [
+          "40% reduction in deployment time",
+          "60% improvement in workflow optimization",
+          "98% code coverage achieved",
+          "70% reduction in production defects"
+        ]
+      },
+      {
+        "id": 2,
+        "company": "San Francisco State University",
+        "position": "Head VP Assistant",
+        "location": "San Francisco, CA",
+        "duration": {
+          "start_date": "June 2024",
+          "end_date": "Present",
+          "total_duration": "1 year 3 months"
+        },
+        "type": "Part-time/Student Position",
+        "status": "Current",
+        "description": [
+          "Orchestrated University Committee Meetings with complete compliance to open meeting laws across 15+ committees, ensuring transparency",
+          "Managed funding evaluation for 200+ organizations, achieving high approval rate and facilitating over half a million in allocated resources",
+          "Supervised team of VP Assistants, implementing performance tracking systems and optimizing committee operations under Board oversight"
+        ],
+        "achievements": [
+          "Managed 15+ committees",
+          "Oversaw funding for 200+ organizations",
+          "Facilitated over $500,000 in allocated resources"
+        ]
+      },
+      {
+        "id": 3,
+        "company": "San Francisco State University",
+        "position": "Assistant to Vice President",
+        "location": "San Francisco, CA",
+        "duration": {
+          "start_date": "October 2022",
+          "end_date": "May 2024",
+          "total_duration": "1 year 8 months"
+        },
+        "type": "Part-time/Student Position",
+        "status": "Completed",
+        "description": [
+          "Assistant role supporting university administration and committee operations"
+        ]
+      },
+      {
+        "id": 4,
+        "company": "Site Service Software Inc.",
+        "position": "Software Engineer Intern",
+        "location": "New York, NY / San Francisco, CA",
+        "duration": {
+          "start_date": "August 2024",
+          "end_date": "April 2025",
+          "total_duration": "9 months"
+        },
+        "type": "Internship",
+        "status": "Completed",
+        "description": [
+          "Spearheaded full-stack migration from legacy systems to React/Spring Boot/PostgreSQL stack, achieving complete modernization and 40% performance improvement",
+          "Implemented OAuth 2.0 authentication, JWT management, and OWASP-compliant security, reducing vulnerabilities by 85%",
+          "Developed 20+ RESTful APIs with comprehensive validation, optimizing database queries and reducing response times by 30%"
+        ],
+        "technologies": ["React", "Spring Boot", "PostgreSQL", "OAuth 2.0", "JWT", "RESTful APIs", "OWASP"],
+        "achievements": [
+          "40% performance improvement through full-stack migration",
+          "85% reduction in security vulnerabilities",
+          "30% reduction in API response times",
+          "Developed 20+ RESTful APIs"
+        ]
+      },
+      {
+        "id": 5,
+        "company": "meetX",
+        "position": "AI Intern",
+        "location": "Not specified",
+        "duration": {
+          "start_date": "February 2025",
+          "end_date": "June 2025",
+          "total_duration": "5 months"
+        },
+        "type": "Internship",
+        "status": "Completed",
+        "description": [
+          "AI-focused internship role (details from LinkedIn profile)"
+        ],
+        "technologies": ["AI/Machine Learning"]
+      },
+      {
+        "id": 6,
+        "company": "Glitter",
+        "position": "Lead Software Engineer",
+        "location": "San Francisco, CA",
+        "duration": {
+          "start_date": "January 2023",
+          "end_date": "December 2023",
+          "total_duration": "1 year"
+        },
+        "type": "Leadership Role",
+        "status": "Completed",
+        "description": [
+          "Lead Software Engineer role managing development teams and technical architecture"
+        ],
+        "technologies": ["Software Engineering", "Team Leadership"]
+      }
+    ],
+    "summary": {
+      "total_experience": "4+ years",
+      "current_positions": 2,
+      "completed_positions": 4,
+      "industries": ["Enterprise Software", "Education", "AI/ML", "CRM", "University Administration"],
+      "primary_focus": ["Full-Stack Development", "AI/ML", "Microservices", "Team Leadership", "System Architecture"]
+    }
+  }
+}

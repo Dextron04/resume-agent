@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "user_name": "Tushin Kulshreshtha",
+    "total_projects": 25,
+    "generated_timestamp": "2025-08-17T14:42:18.603976",
+    "generator": "GitHub Portfolio Maker"
+  },
+  "files": [
+    "01_github-portfolio-maker.json",
+    "02_ConnectX.json",
+    "03_get-me-a-fucking-job.json",
+    "04_AI-ER.json",
+    "05_Data-Scrapper.json",
+    "06_Glitter-App.json",
+    "07_SafeWalk.json",
+    "08_gamblers-uno.json",
+    "09_serial-project-manager.json",
+    "10_dex-pay.json",
+    "11_ai-blog-generator-interview-TushinKulshreshtha.json",
+    "12_space-portfolio.json",
+    "13_ARIA.json",
+    "14_File-System-Project.json",
+    "15_ServerManager-ios.json",
+    "16_json-server.json",
+    "17_SpeechToText.json",
+    "18_anime-robot.json",
+    "19_gr-yp.json",
+    "20_server-gpt2.json",
+    "21_s3_video_processing.json",
+    "22_server-dashboard.json",
+    "23_csc415-assignment-4-csvthreads-Dextron04.json",
+    "24_csc415-assignment3-simpleshell-Dextron04.json",
+    "25_Text_To_Speech.json"
+  ],
+  "projects_summary": [
+    {
+      "project_number": 1,
+      "title": "github-portfolio-maker",
+      "filename": "01_github-portfolio-maker.json"
+    },
+    {
+      "project_number": 2,
+      "title": "ConnectX",
+      "filename": "02_ConnectX.json"
+    },
+    {
+      "project_number": 3,
+      "title": "get-me-a-fucking-job",
+      "filename": "03_get-me-a-fucking-job.json"
+    },
+    {
+      "project_number": 4,
+      "title": "AI-ER",
+      "filename": "04_AI-ER.json"
+    },
+    {
+      "project_number": 5,
+      "title": "Data-Scrapper",
+      "filename": "05_Data-Scrapper.json"
+    },
+    {
+      "project_number": 6,
+      "title": "Glitter-App",
+      "filename": "06_Glitter-App.json"
+    },
+    {
+      "project_number": 7,
+      "title": "SafeWalk",
+      "filename": "07_SafeWalk.json"
+    },
+    {
+      "project_number": 8,
+      "title": "gamblers-uno",
+      "filename": "08_gamblers-uno.json"
+    },
+    {
+      "project_number": 9,
+      "title": "serial-project-manager",
+      "filename": "09_serial-project-manager.json"
+    },
+    {
+      "project_number": 10,
+      "title": "dex-pay",
+      "filename": "10_dex-pay.json"
+    },
+    {
+      "project_number": 11,
+      "title": "ai-blog-generator-interview-TushinKulshreshtha",
+      "filename": "11_ai-blog-generator-interview-TushinKulshreshtha.json"
+    },
+    {
+      "project_number": 12,
+      "title": "space-portfolio",
+      "filename": "12_space-portfolio.json"
+    },
+    {
+      "project_number": 13,
+      "title": "ARIA",
+      "filename": "13_ARIA.json"
+    },
+    {
+      "project_number": 14,
+      "title": "File-System-Project",
+      "filename": "14_File-System-Project.json"
+    },
+    {
+      "project_number": 15,
+      "title": "ServerManager-ios",
+      "filename": "15_ServerManager-ios.json"
+    },
+    {
+      "project_number": 16,
+      "title": "json-server",
+      "filename": "16_json-server.json"
+    },
+    {
+      "project_number": 17,
+      "title": "SpeechToText",
+      "filename": "17_SpeechToText.json"
+    },
+    {
+      "project_number": 18,
+      "title": "anime-robot",
+      "filename": "18_anime-robot.json"
+    },
+    {
+      "project_number": 19,
+      "title": "gr-yp",
+      "filename": "19_gr-yp.json"
+    },
+    {
+      "project_number": 20,
+      "title": "server-gpt2",
+      "filename": "20_server-gpt2.json"
+    },
+    {
+      "project_number": 21,
+      "title": "s3_video_processing",
+      "filename": "21_s3_video_processing.json"
+    },
+    {
+      "project_number": 22,
+      "title": "server-dashboard",
+      "filename": "22_server-dashboard.json"
+    },
+    {
+      "project_number": 23,
+      "title": "csc415-assignment-4-csvthreads-Dextron04",
+      "filename": "23_csc415-assignment-4-csvthreads-Dextron04.json"
+    },
+    {
+      "project_number": 24,
+      "title": "csc415-assignment3-simpleshell-Dextron04",
+      "filename": "24_csc415-assignment3-simpleshell-Dextron04.json"
+    },
+    {
+      "project_number": 25,
+      "title": "Text_To_Speech",
+      "filename": "25_Text_To_Speech.json"
+    }
+  ]
+}

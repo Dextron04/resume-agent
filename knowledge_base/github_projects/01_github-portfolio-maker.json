@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "project_number": 1,
+    "total_projects": 25,
+    "user_name": "Tushin Kulshreshtha",
+    "generated_timestamp": "2025-08-17T14:42:18.603976",
+    "generator": "GitHub Portfolio Maker"
+  },
+  "project": {
+    "title": "github-portfolio-maker",
+    "summary": "**Project Overview:**\nThe GitHub Portfolio Generator is an automated tool that transforms GitHub repositories into professionally formatted PDF portfolios using AI technology. It leverages Anthropic's Claude AI to create compelling project summaries and combines them with modern design elements to produce comprehensive portfolio documentation of a developer's work.\n\n**Key Features:**\n* AI-powered project summarization using Anthropic Claude for professional descriptions\n* Automated PDF generation with modern, multi-colored design and structured layouts\n* Smart repository detection that identifies and processes repositories with README files\n* Pre-flight validation system to prevent wasted API calls and ensure quality output\n* Real-time progress tracking and comprehensive error handling\n\n**Technologies Used:**\nPython, GitHub API, Anthropic Claude API, FPDF, python-dotenv, Git\n\n**Impact & Benefits:**\nThis tool streamlines the often time-consuming process of creating professional portfolio documentation from GitHub projects. It enables developers to quickly generate polished, comprehensive portfolios that effectively showcase their work to potential employers or clients, saving hours of manual documentation work while ensuring consistent, high-quality output.",
+    "raw_summary": "**Project Overview:**\nThe GitHub Portfolio Generator is an automated tool that transforms GitHub repositories into professionally formatted PDF portfolios using AI technology. It leverages Anthropic's Claude AI to create compelling project summaries and combines them with modern design elements to produce comprehensive portfolio documentation of a developer's work.\n\n**Key Features:**\n* AI-powered project summarization using Anthropic Claude for professional descriptions\n* Automated PDF generation with modern, multi-colored design and structured layouts\n* Smart repository detection that identifies and processes repositories with README files\n* Pre-flight validation system to prevent wasted API calls and ensure quality output\n* Real-time progress tracking and comprehensive error handling\n\n**Technologies Used:**\nPython, GitHub API, Anthropic Claude API, FPDF, python-dotenv, Git\n\n**Impact & Benefits:**\nThis tool streamlines the often time-consuming process of creating professional portfolio documentation from GitHub projects. It enables developers to quickly generate polished, comprehensive portfolios that effectively showcase their work to potential employers or clients, saving hours of manual documentation work while ensuring consistent, high-quality output."
+  }
+}

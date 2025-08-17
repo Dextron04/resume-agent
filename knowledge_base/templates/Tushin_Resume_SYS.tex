@@ -1,0 +1,216 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+
+% Adjust multicol spacing
+\setlength{\multicolsep}{3pt}
+\setlength{\columnsep}{5pt}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Better line spacing for readability
+\renewcommand{\baselinestretch}{0.85}
+
+% Adjusted margins for maximum space - tighter to fit on one page
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.85in}
+\addtolength{\textheight}{1.8in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting with better spacing
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Ensure that the generated PDF is machine-readable/ATS-parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands with better spacing
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{0pt}}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, itemsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\small \scshape Tushin Kulshreshtha} \\ \vspace{1pt}
+    San Francisco, California 94132 \\ \vspace{1pt}
+    \small 
+    \raisebox{-0.1\height}\faPhone\ +1 (925) 819-4160 ~ 
+    \href{mailto:tushink04@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{tushink04@gmail.com}} ~
+    \href{https://dextron04.in}{\raisebox{-0.2\height}\faGlobe\ \underline{dextron04.in}}
+    \vspace{-16pt}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\resumeSubHeadingListStart
+\resumeItem{
+  Software Engineer with 3+ years full-stack development experience in Python, Java, JavaScript, React, and AWS. Proven track record optimizing system performance by 40\%+, delivering scalable applications serving 10M+ users with 99.9\%+ uptime, and implementing CI/CD pipelines. Expertise in microservices architecture, machine learning, and agile development.
+}
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {SellWizr}{June 2025 -- Present}
+      {Software Engineer Intern}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Engineered Docker-based microservices infrastructure for enterprise CRM, implementing containerization patterns that reduced deployment time by 40\% and improved scalability.}
+        \resumeItem{Developed monitoring solution using AWS CloudWatch and custom metrics, enabling real-time performance tracking and reducing MTTR by 60\%.}
+        \resumeItem{Implemented test-driven development (TDD) practices in agile cycles, achieving 98\% code coverage and 70\% reduction in production defects.}
+      \resumeItemListEnd
+      \vspace{-3pt}
+
+    \resumeSubheading
+      {San Francisco State University}{Oct 2022 -- Present}
+      {Head VP Assistant}{San Francisco, USA}
+      \resumeItemListStart
+        \resumeItem{Orchestrated University Committee Meetings with 100\% compliance to open meeting laws across 15+ committees, ensuring operational transparency.}
+        \resumeItem{Streamlined agenda processes, improving meeting efficiency by 25\% and enhancing cross-departmental communication workflows.}
+        \resumeItem{Managed funding evaluation for 200+ organizations, achieving 90\% approval rate and facilitating \$500K+ in allocated resources.}
+      \resumeItemListEnd
+      \vspace{-3pt}
+
+    \resumeSubheading
+      {MeetX}{Feb 2025 -- Apr 2025}
+      {AI/ML Engineer}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Architected production-ready hybrid recommendation system using TensorFlow and PyTorch, achieving 95\% accuracy in user preference prediction for 50K+ concurrent users.}
+        \resumeItem{Implemented deep learning-based cold-start algorithms, increasing new user engagement by 40\% and session duration by 25\%.}
+        \resumeItem{Optimized ML model performance using XGBoost and Scikit-learn, achieving 60\% faster inference times and improved model accuracy across recommendation engine.}
+      \resumeItemListEnd
+      \vspace{-3pt}
+
+    \resumeSubheading
+      {Site Service Software}{Aug 2024 -- Apr 2025}
+      {Software Engineer Intern (Full Stack)}{San Francisco, USA}
+      \resumeItemListStart
+        \resumeItem{Spearheaded full-stack migration from legacy systems to React/Spring Boot/PostgreSQL stack, achieving 100\% modernization and 40\% performance improvement.}
+        \resumeItem{Developed 20+ RESTful APIs with comprehensive validation, optimizing database queries and reducing response times by 30\%.}
+        \resumeItem{Implemented OAuth 2.0 authentication, JWT management, and OWASP-compliant security, reducing vulnerabilities by 85\%.}
+      \resumeItemListEnd
+      \vspace{-3pt}
+
+    \resumeSubheading
+      {Glitter Fund}{Jan 2023 -- Dec 2023}
+      {Lead Software Developer Intern}{San Francisco, USA}
+      \resumeItemListStart
+        \resumeItem{Led team of 3 engineers building Django-based real-time stock screening platform, integrating Tradier API and optimizing latency by 30\%.}
+        \resumeItem{Engineered custom stock filtering algorithms for portfolios under \$1000, deployed on AWS EC2 with CI/CD, maintaining 99.9\% uptime.}
+        \resumeItem{Implemented Redis caching and database optimization strategies, improving platform response times by 45\% under high user load.}
+      \resumeItemListEnd
+      \vspace{-3pt}
+
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+    {\textbf{Custom Linux File System (C/C++, Docker, Kubernetes)}}{}
+    \resumeItemListStart
+        \resumeItem{Engineered high-performance virtual file system with FAT32 implementation, achieving 35\% faster I/O operations and 40\% storage optimization.}
+        \resumeItem{Implemented POSIX-compliant shell commands using C++17 standards, containerized with Docker and deployed on Kubernetes cluster.}
+        \resumeItem{Developed custom memory management system with buffer caching, reducing disk access by 50\% and improving concurrent file operations.}
+    \resumeItemListEnd
+    \vspace{-3pt}
+
+\resumeProjectHeading
+    {\textbf{Server Manager for Raspberry Pi Cluster (React, Express, SwiftUI, Caddy)}}{}
+    \resumeItemListStart
+        \resumeItem{Built monitoring dashboard with real-time analytics and predictive maintenance, reducing manual intervention by 80\%.}
+        \resumeItem{Developed cross-platform iOS app using SwiftUI and configured Caddy reverse proxy with load balancing, improving efficiency by 35\%.}
+        \resumeItem{Implemented WebSocket-based real-time communication for cluster status updates, supporting 20+ nodes with sub-second latency.}
+    \resumeItemListEnd
+    \vspace{-3pt}
+
+\resumeProjectHeading
+    {\textbf{API Gateway with Rate Limiting \& Security (Node.js, Redis, Caddy, Auth0)}}{}
+    \resumeItemListStart
+        \resumeItem{Architected self-hosted API Gateway with automatic TLS and Redis-based rate limiting, achieving 99.5\% service availability.}
+        \resumeItem{Integrated Auth0 JWT authentication with RBAC and microservices load balancing, reducing unauthorized access by 60\%.}
+        \resumeItem{Built comprehensive logging and metrics collection using ELK stack, processing 1M+ requests daily with detailed analytics.}
+    \resumeItemListEnd
+    \vspace{-3pt}
+
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {San Francisco State University}{Fall 2025}
+      {Bachelor of Science in Computer Science | GPA: 3.95 | Phi Beta Kappa Honor Society}{San Francisco, California}
+    
+    \small{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Programming Methodology, Web Development, Database Systems, Machine Structures, Operating Systems, Software Development}
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%------SKILLS SECTION-------
+\section{Skills}
+\small
+\textbf{Programming Languages:} Python, Java, JavaScript, TypeScript, C, C++, GoLang, SQL \\
+\textbf{Frontend \& Backend:} React, Node.js, Express.js, Django, Flask, Spring Boot, HTML5, CSS3, RESTful APIs \\
+\textbf{Databases \& Cloud:} PostgreSQL, MongoDB, Redis, AWS (EC2, S3, Lambda, RDS, CloudWatch), Docker, Kubernetes \\
+\textbf{AI/ML \& Tools:} TensorFlow, PyTorch, Scikit-learn, Git, GitHub, Agile/Scrum, OAuth 2.0, JWT, CI/CD
+\vspace{-12pt}
+
+\end{document}

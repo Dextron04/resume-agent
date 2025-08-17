@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "project_number": 19,
+    "total_projects": 25,
+    "user_name": "Tushin Kulshreshtha",
+    "generated_timestamp": "2025-08-17T14:42:18.603976",
+    "generator": "GitHub Portfolio Maker"
+  },
+  "project": {
+    "title": "gr-yp",
+    "summary": "**Project Overview:**\nA modern, secure authentication system built with Next.js 14 that provides seamless user management and login functionality. This application demonstrates enterprise-level authentication implementation with multiple sign-in options and secure session management.\n\n**Key Features:**\n* OAuth integration with multiple providers for social login capabilities\n* Secure session management and token-based authentication\n* Server-side rendering for optimal performance and SEO\n* Responsive user interface with modern design principles\n* Custom user profile management and data persistence\n\n**Technologies Used:**\n- Next.js 14\n- NextAuth.js\n- MongoDB\n- React\n- Node.js\n- OAuth 2.0\n- Tailwind CSS\n\n**Impact & Benefits:**\nThis authentication system provides developers with a robust foundation for implementing secure user authentication in modern web applications. It significantly reduces development time while maintaining high security standards and offering an excellent user experience through multiple login options.\n\nNote: The portfolio summary is based on the visible information from the screenshot and provided README content. Additional features or technologies might be present in the actual project but weren't included due to limited information.",
+    "raw_summary": "**Project Overview:**\nA modern, secure authentication system built with Next.js 14 that provides seamless user management and login functionality. This application demonstrates enterprise-level authentication implementation with multiple sign-in options and secure session management.\n\n**Key Features:**\n* OAuth integration with multiple providers for social login capabilities\n* Secure session management and token-based authentication\n* Server-side rendering for optimal performance and SEO\n* Responsive user interface with modern design principles\n* Custom user profile management and data persistence\n\n**Technologies Used:**\n- Next.js 14\n- NextAuth.js\n- MongoDB\n- React\n- Node.js\n- OAuth 2.0\n- Tailwind CSS\n\n**Impact & Benefits:**\nThis authentication system provides developers with a robust foundation for implementing secure user authentication in modern web applications. It significantly reduces development time while maintaining high security standards and offering an excellent user experience through multiple login options.\n\nNote: The portfolio summary is based on the visible information from the screenshot and provided README content. Additional features or technologies might be present in the actual project but weren't included due to limited information."
+  }
+}

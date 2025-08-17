@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "project_number": 4,
+    "total_projects": 25,
+    "user_name": "Tushin Kulshreshtha",
+    "generated_timestamp": "2025-08-17T14:42:18.603976",
+    "generator": "GitHub Portfolio Maker"
+  },
+  "project": {
+    "title": "AI-ER",
+    "summary": "**Project Overview:**\nAI-ER is an advanced Entity Resolution and Data Cleaning solution designed to identify and merge duplicate records across large datasets. This system employs artificial intelligence techniques to automatically detect and resolve entity matches, helping organizations maintain clean, consistent, and reliable data.\n\n**Key Features:**\n* Intelligent duplicate detection using machine learning algorithms\n* Automated data cleaning and standardization\n* Configurable matching rules and threshold settings\n* Real-time entity resolution processing\n* Comprehensive audit trail and match confidence scoring\n\n**Technologies Used:**\nPython, Machine Learning Libraries, SQL, Data Processing Frameworks\n\n**Impact & Benefits:**\nAI-ER significantly reduces manual data cleansing efforts while improving data quality and accuracy across enterprise systems. By automating the entity resolution process, organizations can save countless hours of manual review while maintaining higher data integrity standards.\n\nNote: Since limited code and implementation details were provided, this portfolio summary focuses on typical features and benefits of AI-powered entity resolution systems. The summary can be customized further based on specific project implementation details.",
+    "raw_summary": "**Project Overview:**\nAI-ER is an advanced Entity Resolution and Data Cleaning solution designed to identify and merge duplicate records across large datasets. This system employs artificial intelligence techniques to automatically detect and resolve entity matches, helping organizations maintain clean, consistent, and reliable data.\n\n**Key Features:**\n* Intelligent duplicate detection using machine learning algorithms\n* Automated data cleaning and standardization\n* Configurable matching rules and threshold settings\n* Real-time entity resolution processing\n* Comprehensive audit trail and match confidence scoring\n\n**Technologies Used:**\nPython, Machine Learning Libraries, SQL, Data Processing Frameworks\n\n**Impact & Benefits:**\nAI-ER significantly reduces manual data cleansing efforts while improving data quality and accuracy across enterprise systems. By automating the entity resolution process, organizations can save countless hours of manual review while maintaining higher data integrity standards.\n\nNote: Since limited code and implementation details were provided, this portfolio summary focuses on typical features and benefits of AI-powered entity resolution systems. The summary can be customized further based on specific project implementation details."
+  }
+}

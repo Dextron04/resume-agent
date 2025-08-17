@@ -1,0 +1,120 @@
+{
+  "skills_by_proficiency": {
+    "last_updated": "2025-08-17",
+    "proficiency_levels": {
+      "advanced": {
+        "description": "Skills with 3+ years experience and demonstrated expertise",
+        "skills": [
+          {
+            "category": "Programming Languages",
+            "skills": ["Python", "Java", "JavaScript"]
+          },
+          {
+            "category": "Web Technologies",
+            "skills": ["React", "React Native", "Node.js", "Spring Boot", "RESTful APIs"]
+          },
+          {
+            "category": "Databases", 
+            "skills": ["MySQL", "PostgreSQL"]
+          },
+          {
+            "category": "Tools & Systems",
+            "skills": ["Linux", "Git", "GitHub"]
+          },
+          {
+            "category": "Cloud Technologies",
+            "skills": ["Docker"]
+          },
+          {
+            "category": "Soft Skills",
+            "skills": ["Project Management", "Leading Development Teams", "Test-Driven Development", "Agile Development"]
+          }
+        ],
+        "total_advanced_skills": 17
+      },
+      "intermediate": {
+        "description": "Skills with 1-3 years experience and solid understanding",
+        "skills": [
+          {
+            "category": "Programming Languages",
+            "skills": ["C", "C++"]
+          },
+          {
+            "category": "Web Technologies",
+            "skills": ["Next.js", "Django", "Vite"]
+          },
+          {
+            "category": "Cloud Technologies",
+            "skills": ["AWS EC2", "AWS S3", "AWS Lambda"]
+          },
+          {
+            "category": "Databases",
+            "skills": ["MongoDB"]
+          },
+          {
+            "category": "Specialized Technologies",
+            "skills": ["Temporal", "n8n", "OAuth 2.0", "JWT", "OWASP", "Socket.IO", "Beautiful Soup", "Selenium"]
+          },
+          {
+            "category": "Soft Skills",
+            "skills": ["System Architecture"]
+          }
+        ],
+        "total_intermediate_skills": 16
+      },
+      "beginner": {
+        "description": "Skills with less than 1 year experience or learning phase",
+        "skills": [
+          {
+            "category": "Programming Languages",
+            "skills": ["Assembly (MIPS)"]
+          },
+          {
+            "category": "Cloud Technologies",
+            "skills": ["AWS EKS", "AWS CloudWatch"]
+          },
+          {
+            "category": "Databases",
+            "skills": ["Azure SQL"]
+          },
+          {
+            "category": "Specialized Technologies",
+            "skills": ["Leaflet.js", "Google Gemini API"]
+          }
+        ],
+        "total_beginner_skills": 6
+      }
+    },
+    "skill_development_focus": {
+      "currently_improving": [
+        "AWS EKS (Container Orchestration)",
+        "AWS CloudWatch (Monitoring & Logging)", 
+        "Google Gemini API (AI Integration)",
+        "Leaflet.js (Data Visualization)"
+      ],
+      "next_learning_goals": [
+        "Advanced Kubernetes management",
+        "Machine Learning model deployment",
+        "Advanced microservices patterns",
+        "DevOps automation tools"
+      ]
+    },
+    "market_relevant_skills": {
+      "high_demand_skills": [
+        "React/Node.js Full-Stack Development",
+        "AWS Cloud Services",
+        "Docker & Microservices",
+        "Python Backend Development",
+        "PostgreSQL Database Management",
+        "RESTful API Development",
+        "OAuth 2.0 Security Implementation"
+      ],
+      "emerging_technologies": [
+        "AI Workflow Automation (Temporal, n8n)",
+        "Container Orchestration (Kubernetes/EKS)",
+        "Real-time Applications (Socket.IO)",
+        "AI Integration (Google Gemini API)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "skills": {
+    "last_updated": "2025-08-17",
+    "categories": {
+      "programming_languages": {
+        "category": "Programming Languages",
+        "skills": [
+          {
+            "name": "Python",
+            "proficiency": "Advanced",
+            "years_experience": "4+",
+            "context": ["Backend Development", "Data Processing", "AI/ML", "Automation"]
+          },
+          {
+            "name": "Java",
+            "proficiency": "Advanced", 
+            "years_experience": "3+",
+            "context": ["Backend Development", "Spring Boot", "Enterprise Applications"]
+          },
+          {
+            "name": "C",
+            "proficiency": "Intermediate",
+            "years_experience": "2+",
+            "context": ["System Programming", "Academic Projects"]
+          },
+          {
+            "name": "C++",
+            "proficiency": "Intermediate",
+            "years_experience": "2+",
+            "context": ["System Programming", "Data Structures & Algorithms"]
+          },
+          {
+            "name": "Assembly (MIPS)",
+            "proficiency": "Beginner",
+            "years_experience": "1",
+            "context": ["Academic Learning", "System Architecture"]
+          },
+          {
+            "name": "JavaScript",
+            "proficiency": "Advanced",
+            "years_experience": "3+",
+            "context": ["Frontend Development", "Node.js", "Full-Stack Development"]
+          }
+        ]
+      },
+      "web_technologies": {
+        "category": "Web Technologies & Frameworks",
+        "skills": [
+          {
+            "name": "React",
+            "proficiency": "Advanced",
+            "years_experience": "3+",
+            "context": ["Frontend Development", "SPA Development", "Component Architecture"]
+          },
+          {
+            "name": "React Native",
+            "proficiency": "Advanced",
+            "years_experience": "2+",
+            "context": ["Mobile Development", "Cross-platform Apps"]
+          },
+          {
+            "name": "Next.js",
+            "proficiency": "Intermediate",
+            "years_experience": "2+",
+            "context": ["Full-Stack Development", "SSR", "Modern Web Apps"]
+          },
+          {
+            "name": "Node.js",
+            "proficiency": "Advanced",
+            "years_experience": "3+",
+            "context": ["Backend Development", "API Development", "Real-time Applications"]
+          },
+          {
+            "name": "Django",
+            "proficiency": "Intermediate",
+            "years_experience": "2+",
+            "context": ["Python Web Development", "Backend APIs"]
+          },
+          {
+            "name": "Spring Boot",
+            "proficiency": "Advanced",
+            "years_experience": "2+",
+            "context": ["Java Backend Development", "Microservices", "Enterprise Applications"]
+          },
+          {
+            "name": "RESTful APIs",
+            "proficiency": "Advanced",
+            "years_experience": "3+",
+            "context": ["API Design", "Backend Development", "System Integration"]
+          },
+          {
+            "name": "Vite",
+            "proficiency": "Intermediate",
+            "years_experience": "1+",
+            "context": ["Modern Build Tools", "Frontend Development"]
+          }
+        ]
+      },
+      "cloud_technologies": {
+        "category": "Cloud & DevOps",
+        "skills": [
+          {
+            "name": "AWS EC2",
+            "proficiency": "Intermediate",
+            "years_experience": "2+",
+            "context": ["Cloud Infrastructure", "Server Management"]
+          },
+          {
+            "name": "AWS S3",
+            "proficiency": "Intermediate", 
+            "years_experience": "2+",
+            "context": ["Cloud Storage", "File Management", "Static Hosting"]
+          },
+          {
+            "name": "AWS Lambda",
+            "proficiency": "Intermediate",
+            "years_experience": "1+",
+            "context": ["Serverless Computing", "Event-driven Architecture"]
+          },
+          {
+            "name": "AWS EKS",
+            "proficiency": "Beginner",
+            "years_experience": "1",
+            "context": ["Kubernetes Management", "Container Orchestration"]
+          },
+          {
+            "name": "AWS CloudWatch",
+            "proficiency": "Beginner",
+            "years_experience": "1",
+            "context": ["Monitoring", "Logging", "Performance Tracking"]
+          },
+          {
+            "name": "Docker",
+            "proficiency": "Advanced",
+            "years_experience": "2+",
+            "context": ["Containerization", "Microservices", "DevOps"]
+          }
+        ]
+      },
+      "databases": {
+        "category": "Databases",
+        "skills": [
+          {
+            "name": "MySQL",
+            "proficiency": "Advanced",
+            "years_experience": "3+",
+            "context": ["Relational Database Design", "Query Optimization", "Backend Development"]
+          },
+          {
+            "name": "MongoDB",
+            "proficiency": "Intermediate",
+            "years_experience": "2+",
+            "context": ["NoSQL Database", "Document Storage", "Modern Web Apps"]
+          },
+          {
+            "name": "PostgreSQL",
+            "proficiency": "Advanced",
+            "years_experience": "2+",
+            "context": ["Advanced SQL", "Enterprise Applications", "Complex Queries"]
+          },
+          {
+            "name": "Azure SQL",
+            "proficiency": "Beginner",
+            "years_experience": "1",
+            "context": ["Cloud Database", "Microsoft Azure", "Enterprise Solutions"]
+          }
+        ]
+      },
+      "tools_and_systems": {
+        "category": "Tools & Systems",
+        "skills": [
+          {
+            "name": "Linux",
+            "proficiency": "Advanced",
+            "years_experience": "3+",
+            "context": ["System Administration", "Server Management", "Development Environment"]
+          },
+          {
+            "name": "Git",
+            "proficiency": "Advanced",
+            "years_experience": "4+",
+            "context": ["Version Control", "Collaboration", "Code Management"]
+          },
+          {
+            "name": "GitHub",
+            "proficiency": "Advanced",
+            "years_experience": "4+",
+            "context": ["Code Repository", "CI/CD", "Project Management"]
+          }
+        ]
+      },
+      "specialized_technologies": {
+        "category": "Specialized Technologies",
+        "skills": [
+          {
+            "name": "Temporal",
+            "proficiency": "Intermediate",
+            "years_experience": "1",
+            "context": ["Workflow Orchestration", "Distributed Systems"]
+          },
+          {
+            "name": "n8n",
+            "proficiency": "Intermediate",
+            "years_experience": "1",
+            "context": ["Workflow Automation", "AI Systems"]
+          },
+          {
+            "name": "OAuth 2.0",
+            "proficiency": "Intermediate",
+            "years_experience": "1+",
+            "context": ["Authentication", "Security", "API Security"]
+          },
+          {
+            "name": "JWT",
+            "proficiency": "Intermediate",
+            "years_experience": "2+",
+            "context": ["Token-based Authentication", "API Security"]
+          },
+          {
+            "name": "OWASP",
+            "proficiency": "Intermediate",
+            "years_experience": "1+",
+            "context": ["Security Best Practices", "Web Application Security"]
+          },
+          {
+            "name": "Socket.IO",
+            "proficiency": "Intermediate",
+            "years_experience": "1+",
+            "context": ["Real-time Communication", "WebSocket Management"]
+          },
+          {
+            "name": "Beautiful Soup",
+            "proficiency": "Intermediate",
+            "years_experience": "1+",
+            "context": ["Web Scraping", "Data Extraction"]
+          },
+          {
+            "name": "Selenium",
+            "proficiency": "Intermediate",
+            "years_experience": "1+",
+            "context": ["Web Automation", "Testing", "Data Scraping"]
+          },
+          {
+            "name": "Leaflet.js",
+            "proficiency": "Beginner",
+            "years_experience": "1",
+            "context": ["Interactive Maps", "Data Visualization"]
+          },
+          {
+            "name": "Google Gemini API",
+            "proficiency": "Beginner",
+            "years_experience": "1",
+            "context": ["AI Integration", "Natural Language Processing"]
+          }
+        ]
+      },
+      "soft_skills": {
+        "category": "Soft Skills & Leadership",
+        "skills": [
+          {
+            "name": "Project Management",
+            "proficiency": "Advanced",
+            "years_experience": "3+",
+            "context": ["Team Leadership", "Resource Management", "Timeline Management"]
+          },
+          {
+            "name": "Leading Development Teams",
+            "proficiency": "Advanced",
+            "years_experience": "2+",
+            "context": ["Technical Leadership", "Mentoring", "Code Review"]
+          },
+          {
+            "name": "Test-Driven Development",
+            "proficiency": "Advanced",
+            "years_experience": "2+",
+            "context": ["Software Quality", "Agile Development", "Code Coverage"]
+          },
+          {
+            "name": "Agile Development",
+            "proficiency": "Advanced",
+            "years_experience": "2+",
+            "context": ["Sprint Planning", "Iterative Development", "Team Collaboration"]
+          },
+          {
+            "name": "System Architecture",
+            "proficiency": "Intermediate",
+            "years_experience": "2+",
+            "context": ["Microservices Design", "Scalable Systems", "Technical Planning"]
+          }
+        ]
+      }
+    },
+    "summary": {
+      "total_skills": 40,
+      "primary_strengths": [
+        "Full-Stack Web Development",
+        "Cloud Technologies (AWS)",
+        "Database Management",
+        "Team Leadership",
+        "System Architecture"
+      ],
+      "emerging_skills": [
+        "AI/ML Integration",
+        "Workflow Automation",
+        "Advanced Security Implementation",
+        "Container Orchestration"
+      ],
+      "academic_achievements": [
+        "Phi Beta Kappa Honor Society",
+        "Dean's List (All Semesters)",
+        "GPA: 3.95/4.0"
+      ]
+    }
+  }
+}
