@@ -444,3 +444,458 @@ class ResumeAIAgent:
     def _extract_technologies_fallback(self, text: str) -> List[str]:
         """Basic technology extraction fallback"""
         return self._extract_skills_fallback(text)  # Same as skills for now
+    
+    # ============================================================================
+    # PHASE 2: SEMANTIC MATCHING & INTELLIGENT PROJECT SELECTION
+    # ============================================================================
+    
+    def calculate_project_relevance(self, job_analysis: JobAnalysisModel, max_projects: int = 4) -> List[Tuple[ProjectModel, float]]:
+        """
+        Calculate relevance scores for all projects based on job requirements
+        
+        Args:
+            job_analysis: Analyzed job requirements
+            max_projects: Maximum number of projects to return
+            
+        Returns:
+            List[Tuple[ProjectModel, float]]: Projects with relevance scores (0-1)
+        """
+        logger.info(f"Calculating project relevance for {len(self.knowledge_base.projects)} projects...")
+        
+        if not self.knowledge_base.projects:
+            logger.warning("No projects found in knowledge base")
+            return []
+        
+        # Combine job requirements for semantic matching
+        job_requirements = self._combine_job_requirements(job_analysis)
+        
+        relevance_scores = []
+        
+        for project in self.knowledge_base.projects:
+            try:
+                # Calculate semantic similarity score
+                semantic_score = self._calculate_semantic_similarity(job_requirements, project.summary)
+                
+                # Calculate technology overlap score
+                tech_overlap_score = self._calculate_technology_overlap(job_analysis.technologies, project.technologies)
+                
+                # Calculate keyword match score
+                keyword_score = self._calculate_keyword_match(job_analysis.keywords, project.summary)
+                
+                # Combine scores with weights
+                combined_score = (
+                    semantic_score * 0.5 +      # Semantic similarity (50%)
+                    tech_overlap_score * 0.3 +  # Technology overlap (30%)
+                    keyword_score * 0.2          # Keyword matching (20%)
+                )
+                
+                # Boost score if project has many required skills
+                required_skills_boost = self._calculate_required_skills_boost(job_analysis.required_skills, project.technologies)
+                combined_score += required_skills_boost * 0.1
+                
+                # Ensure score is between 0 and 1
+                combined_score = min(1.0, max(0.0, combined_score))
+                
+                relevance_scores.append((project, combined_score))
+                
+                logger.debug(f"Project '{project.title}': semantic={semantic_score:.3f}, tech={tech_overlap_score:.3f}, "
+                           f"keyword={keyword_score:.3f}, combined={combined_score:.3f}")
+                
+            except Exception as e:
+                logger.error(f"Error calculating relevance for project '{project.title}': {e}")
+                relevance_scores.append((project, 0.0))
+        
+        # Sort by relevance score (highest first) and return top projects
+        sorted_projects = sorted(relevance_scores, key=lambda x: x[1], reverse=True)
+        top_projects = sorted_projects[:max_projects]
+        
+        logger.info(f"Top {len(top_projects)} projects selected with scores: "
+                   f"{[f'{p[0].title}({p[1]:.3f})' for p in top_projects]}")
+        
+        return top_projects
+    
+    def calculate_experience_relevance(self, job_analysis: JobAnalysisModel) -> List[Tuple[ExperienceModel, float]]:
+        """
+        Calculate relevance scores for work experiences based on job requirements
+        
+        Args:
+            job_analysis: Analyzed job requirements
+            
+        Returns:
+            List[Tuple[ExperienceModel, float]]: Experiences with relevance scores
+        """
+        logger.info(f"Calculating experience relevance for {len(self.knowledge_base.experience)} experiences...")
+        
+        if not self.knowledge_base.experience:
+            logger.warning("No work experience found in knowledge base")
+            return []
+        
+        job_requirements = self._combine_job_requirements(job_analysis)
+        relevance_scores = []
+        
+        for experience in self.knowledge_base.experience:
+            try:
+                # Combine experience description for analysis
+                exp_text = " ".join(experience.description + experience.achievements)
+                
+                # Calculate semantic similarity
+                semantic_score = self._calculate_semantic_similarity(job_requirements, exp_text)
+                
+                # Calculate technology overlap
+                tech_overlap_score = self._calculate_technology_overlap(job_analysis.technologies, experience.technologies)
+                
+                # Calculate seniority match (current positions get higher scores)
+                seniority_score = 1.0 if experience.status == "current" else 0.7
+                
+                # Combine scores
+                combined_score = (
+                    semantic_score * 0.4 +      # Semantic similarity (40%)
+                    tech_overlap_score * 0.4 +  # Technology overlap (40%)
+                    seniority_score * 0.2        # Seniority/recency (20%)
+                )
+                
+                combined_score = min(1.0, max(0.0, combined_score))
+                relevance_scores.append((experience, combined_score))
+                
+                logger.debug(f"Experience '{experience.position} at {experience.company}': "
+                           f"semantic={semantic_score:.3f}, tech={tech_overlap_score:.3f}, "
+                           f"seniority={seniority_score:.3f}, combined={combined_score:.3f}")
+                
+            except Exception as e:
+                logger.error(f"Error calculating relevance for experience '{experience.position}': {e}")
+                relevance_scores.append((experience, 0.0))
+        
+        # Sort by relevance score (highest first)
+        sorted_experiences = sorted(relevance_scores, key=lambda x: x[1], reverse=True)
+        
+        logger.info(f"Experience relevance calculated: "
+                   f"{[f'{e[0].position}({e[1]:.3f})' for e in sorted_experiences]}")
+        
+        return sorted_experiences
+    
+    def generate_tailored_content(self, job_analysis: JobAnalysisModel, max_projects: int = 4) -> Dict[str, Any]:
+        """
+        Generate tailored resume content based on job analysis
+        
+        Args:
+            job_analysis: Analyzed job requirements
+            max_projects: Maximum number of projects to include
+            
+        Returns:
+            Dict[str, Any]: Tailored content with selected projects and experiences
+        """
+        logger.info("Generating tailored resume content...")
+        
+        # Get most relevant projects
+        relevant_projects = self.calculate_project_relevance(job_analysis, max_projects)
+        
+        # Get most relevant experiences
+        relevant_experiences = self.calculate_experience_relevance(job_analysis)
+        
+        # Select top skills based on job requirements
+        relevant_skills = self._select_relevant_skills(job_analysis)
+        
+        # Generate optimized summary/objective
+        optimized_summary = self._generate_optimized_summary(job_analysis)
+        
+        tailored_content = {
+            "job_analysis": job_analysis.dict(),
+            "selected_projects": [
+                {
+                    "project": project.dict(),
+                    "relevance_score": score,
+                    "match_reasons": self._explain_project_match(job_analysis, project)
+                }
+                for project, score in relevant_projects
+            ],
+            "selected_experiences": [
+                {
+                    "experience": exp.dict(),
+                    "relevance_score": score,
+                    "match_reasons": self._explain_experience_match(job_analysis, exp)
+                }
+                for exp, score in relevant_experiences[:3]  # Top 3 experiences
+            ],
+            "relevant_skills": relevant_skills,
+            "optimized_summary": optimized_summary,
+            "optimization_metadata": {
+                "total_projects_available": len(self.knowledge_base.projects),
+                "total_experiences_available": len(self.knowledge_base.experience),
+                "projects_selected": len(relevant_projects),
+                "experiences_selected": min(3, len(relevant_experiences)),
+                "generation_timestamp": datetime.now().isoformat()
+            }
+        }
+        
+        logger.info(f"Tailored content generated: {len(relevant_projects)} projects, "
+                   f"{min(3, len(relevant_experiences))} experiences selected")
+        
+        return tailored_content
+    
+    def _combine_job_requirements(self, job_analysis: JobAnalysisModel) -> str:
+        """Combine all job requirements into a single text for semantic analysis"""
+        requirements = []
+        
+        if job_analysis.required_skills:
+            requirements.append("Required skills: " + ", ".join(job_analysis.required_skills))
+        
+        if job_analysis.preferred_skills:
+            requirements.append("Preferred skills: " + ", ".join(job_analysis.preferred_skills))
+        
+        if job_analysis.keywords:
+            requirements.append("Keywords: " + ", ".join(job_analysis.keywords))
+        
+        if job_analysis.technologies:
+            requirements.append("Technologies: " + ", ".join(job_analysis.technologies))
+        
+        if job_analysis.industry_focus:
+            requirements.append(f"Industry: {job_analysis.industry_focus}")
+        
+        if job_analysis.job_title:
+            requirements.append(f"Role: {job_analysis.job_title}")
+        
+        return ". ".join(requirements)
+    
+    def _calculate_semantic_similarity(self, text1: str, text2: str) -> float:
+        """
+        Calculate semantic similarity between two texts using sentence transformers
+        
+        Args:
+            text1: First text (job requirements)
+            text2: Second text (project/experience description)
+            
+        Returns:
+            float: Similarity score between 0 and 1
+        """
+        try:
+            model = self.get_sentence_model()
+            if model is None:
+                logger.warning("Sentence model not available, using fallback similarity")
+                return self._fallback_similarity(text1, text2)
+            
+            # Encode both texts
+            embeddings = model.encode([text1, text2])
+            
+            # Calculate cosine similarity
+            similarity_matrix = cosine_similarity([embeddings[0]], [embeddings[1]])
+            similarity_score = similarity_matrix[0][0]
+            
+            # Ensure score is between 0 and 1
+            return max(0.0, min(1.0, float(similarity_score)))
+            
+        except Exception as e:
+            logger.warning(f"Error calculating semantic similarity: {e}")
+            return self._fallback_similarity(text1, text2)
+    
+    def _calculate_technology_overlap(self, job_techs: List[str], project_techs: List[str]) -> float:
+        """
+        Calculate overlap between job technologies and project technologies
+        
+        Args:
+            job_techs: Technologies mentioned in job description
+            project_techs: Technologies used in project
+            
+        Returns:
+            float: Overlap score between 0 and 1
+        """
+        if not job_techs:
+            return 0.0
+        
+        job_techs_lower = [tech.lower() for tech in job_techs]
+        project_techs_lower = [tech.lower() for tech in project_techs]
+        
+        # Calculate intersection
+        overlap = set(job_techs_lower) & set(project_techs_lower)
+        
+        # Return Jaccard similarity (intersection / union)
+        union = set(job_techs_lower) | set(project_techs_lower)
+        
+        if not union:
+            return 0.0
+        
+        return len(overlap) / len(union)
+    
+    def _calculate_keyword_match(self, keywords: List[str], text: str) -> float:
+        """
+        Calculate how many keywords from job description appear in text
+        
+        Args:
+            keywords: Keywords from job analysis
+            text: Text to search in
+            
+        Returns:
+            float: Match score between 0 and 1
+        """
+        if not keywords:
+            return 0.0
+        
+        text_lower = text.lower()
+        matched_keywords = 0
+        
+        for keyword in keywords:
+            if keyword.lower() in text_lower:
+                matched_keywords += 1
+        
+        return matched_keywords / len(keywords)
+    
+    def _calculate_required_skills_boost(self, required_skills: List[str], project_techs: List[str]) -> float:
+        """
+        Calculate boost score based on how many required skills the project demonstrates
+        
+        Args:
+            required_skills: Required skills from job
+            project_techs: Technologies in project
+            
+        Returns:
+            float: Boost score (0 to 1)
+        """
+        if not required_skills:
+            return 0.0
+        
+        required_lower = [skill.lower() for skill in required_skills]
+        project_lower = [tech.lower() for tech in project_techs]
+        
+        matched_skills = sum(1 for skill in required_lower if skill in project_lower)
+        
+        return matched_skills / len(required_skills)
+    
+    def _fallback_similarity(self, text1: str, text2: str) -> float:
+        """
+        Fallback similarity calculation using simple word overlap
+        
+        Args:
+            text1: First text
+            text2: Second text
+            
+        Returns:
+            float: Basic similarity score
+        """
+        words1 = set(text1.lower().split())
+        words2 = set(text2.lower().split())
+        
+        intersection = words1 & words2
+        union = words1 | words2
+        
+        if not union:
+            return 0.0
+        
+        return len(intersection) / len(union)
+    
+    def _select_relevant_skills(self, job_analysis: JobAnalysisModel) -> Dict[str, List[str]]:
+        """
+        Select and prioritize skills based on job requirements
+        
+        Args:
+            job_analysis: Job analysis results
+            
+        Returns:
+            Dict[str, List[str]]: Categorized relevant skills
+        """
+        relevant_skills = {}
+        job_techs_lower = [tech.lower() for tech in job_analysis.technologies + job_analysis.required_skills]
+        
+        for category, skills in self.knowledge_base.skills.items():
+            category_relevant = []
+            
+            for skill in skills:
+                skill_name_lower = skill.name.lower()
+                
+                # Check if skill matches job requirements
+                if any(tech in skill_name_lower or skill_name_lower in tech for tech in job_techs_lower):
+                    category_relevant.append(skill.name)
+            
+            if category_relevant:
+                relevant_skills[category] = category_relevant
+        
+        return relevant_skills
+    
+    def _generate_optimized_summary(self, job_analysis: JobAnalysisModel) -> str:
+        """
+        Generate an optimized professional summary based on job requirements
+        
+        Args:
+            job_analysis: Job analysis results
+            
+        Returns:
+            str: Optimized professional summary
+        """
+        profile = self.knowledge_base.profile_summary.get('personal_info', {})
+        name = profile.get('name', 'Software Engineer')
+        title = profile.get('title', job_analysis.job_title or 'Software Engineer')
+        
+        # Key technologies to highlight
+        key_techs = job_analysis.technologies[:5]  # Top 5 technologies
+        tech_string = ", ".join(key_techs) if key_techs else "modern technologies"
+        
+        # Experience level
+        exp_level = job_analysis.experience_level or "experienced"
+        
+        summary = (f"{exp_level} {title} with expertise in {tech_string}. "
+                  f"Proven track record of delivering high-quality software solutions "
+                  f"and collaborating effectively in agile development environments.")
+        
+        return summary
+    
+    def _explain_project_match(self, job_analysis: JobAnalysisModel, project: ProjectModel) -> List[str]:
+        """
+        Generate explanations for why a project matches the job requirements
+        
+        Args:
+            job_analysis: Job analysis results
+            project: Project model
+            
+        Returns:
+            List[str]: List of match reasons
+        """
+        reasons = []
+        
+        # Technology matches
+        job_techs_lower = [tech.lower() for tech in job_analysis.technologies]
+        project_techs_lower = [tech.lower() for tech in project.technologies]
+        tech_matches = [tech for tech in project.technologies if tech.lower() in job_techs_lower]
+        
+        if tech_matches:
+            reasons.append(f"Uses required technologies: {', '.join(tech_matches)}")
+        
+        # Keyword matches
+        keyword_matches = [kw for kw in job_analysis.keywords if kw.lower() in project.summary.lower()]
+        if keyword_matches:
+            reasons.append(f"Contains relevant keywords: {', '.join(keyword_matches[:3])}")
+        
+        # Domain relevance
+        if job_analysis.industry_focus and job_analysis.industry_focus.lower() in project.summary.lower():
+            reasons.append(f"Relevant to {job_analysis.industry_focus} industry")
+        
+        return reasons
+    
+    def _explain_experience_match(self, job_analysis: JobAnalysisModel, experience: ExperienceModel) -> List[str]:
+        """
+        Generate explanations for why an experience matches the job requirements
+        
+        Args:
+            job_analysis: Job analysis results
+            experience: Experience model
+            
+        Returns:
+            List[str]: List of match reasons
+        """
+        reasons = []
+        
+        # Technology matches
+        job_techs_lower = [tech.lower() for tech in job_analysis.technologies]
+        exp_techs_lower = [tech.lower() for tech in experience.technologies]
+        tech_matches = [tech for tech in experience.technologies if tech.lower() in job_techs_lower]
+        
+        if tech_matches:
+            reasons.append(f"Experience with: {', '.join(tech_matches)}")
+        
+        # Position relevance
+        if job_analysis.job_title:
+            if job_analysis.job_title.lower() in experience.position.lower():
+                reasons.append(f"Similar role: {experience.position}")
+        
+        # Current position boost
+        if experience.status == "current":
+            reasons.append("Current position (most recent experience)")
+        
+        return reasons

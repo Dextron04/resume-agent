@@ -125,6 +125,82 @@ async def get_knowledge_base_summary(
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.post("/api/generate-tailored-content")
+async def generate_tailored_content(
+    request: Dict[str, Any],
+    agent: ResumeAIAgent = Depends(get_resume_agent)
+):
+    """
+    Phase 2: Generate tailored resume content based on job description
+    """
+    try:
+        job_description = request.get("job_description", "")
+        max_projects = request.get("max_projects", 4)
+        
+        if not job_description:
+            raise HTTPException(status_code=400, detail="job_description is required")
+        
+        # Analyze the job description first
+        job_analysis = agent.analyze_job_description(job_description)
+        
+        # Generate tailored content using Phase 2 functionality
+        tailored_content = agent.generate_tailored_content(job_analysis, max_projects)
+        
+        return {
+            "tailored_content": tailored_content,
+            "status": "success",
+            "phase": "2"
+        }
+        
+    except Exception as e:
+        logger.error(f"Error generating tailored content: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/calculate-project-relevance")
+async def calculate_project_relevance(
+    request: Dict[str, Any],
+    agent: ResumeAIAgent = Depends(get_resume_agent)
+):
+    """
+    Phase 2: Calculate relevance scores for projects based on job requirements
+    """
+    try:
+        job_description = request.get("job_description", "")
+        max_projects = request.get("max_projects", 10)
+        
+        if not job_description:
+            raise HTTPException(status_code=400, detail="job_description is required")
+        
+        # Analyze the job description
+        job_analysis = agent.analyze_job_description(job_description)
+        
+        # Calculate project relevance scores
+        relevant_projects = agent.calculate_project_relevance(job_analysis, max_projects)
+        
+        return {
+            "job_analysis": job_analysis.dict(),
+            "relevant_projects": [
+                {
+                    "project": {
+                        "title": project.title,
+                        "technologies": project.technologies,
+                        "summary": project.summary[:200] + "..." if len(project.summary) > 200 else project.summary
+                    },
+                    "relevance_score": round(score, 3),
+                    "match_reasons": agent._explain_project_match(job_analysis, project)
+                }
+                for project, score in relevant_projects
+            ],
+            "total_projects_analyzed": len(agent.knowledge_base.projects),
+            "status": "success"
+        }
+        
+    except Exception as e:
+        logger.error(f"Error calculating project relevance: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
