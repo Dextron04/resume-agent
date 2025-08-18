@@ -1,0 +1,13 @@
+.venv/
+
+ai-resume-generator/.venv/
+ai-resume-generator/.pytest_cache/
+ai-resume-generator/app/__pycache__/
+ai-resume-generator/app/models/__pycache__/
+ai-resume-generator/app/services/__pycache__/
+ai-resume-generator/tests/__pycache__/
+
+.env
+.env.local
+.env.example
+.env*
