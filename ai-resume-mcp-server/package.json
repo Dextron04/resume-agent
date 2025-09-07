@@ -1,0 +1,45 @@
+{
+  "name": "ai-resume-mcp-server",
+  "version": "1.0.0",
+  "description": "AI-powered MCP Server for generating tailored resumes using LaTeX templates and knowledge base",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "inspector": "npx @modelcontextprotocol/inspector node src/index.js",
+    "test": "node src/test.js"
+  },
+  "keywords": [
+    "mcp",
+    "resume",
+    "ai",
+    "latex",
+    "pdf",
+    "generator",
+    "ats",
+    "job-matching"
+  ],
+  "author": "Tushin Kulshreshtha",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "^0.16.6"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dextron04/ai-resume-mcp-server"
+  },
+  "mcp": {
+    "server": {
+      "command": "node",
+      "args": ["src/index.js"]
+    }
+  }
+}

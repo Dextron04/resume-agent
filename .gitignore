@@ -11,3 +11,5 @@ ai-resume-generator/tests/__pycache__/
 .env.local
 .env.example
 .env*
+
+knowledge_base/
