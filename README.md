@@ -1,3 +1,6 @@
+<img width="1536" height="1024" alt="ChatGPT Image Oct 27, 2025, 11_25_06 PM" src="https://github.com/user-attachments/assets/42181a90-eb6b-46b1-861e-2339e55c2635" />
+
+
 # 🤖 AI Resume Generator
 
 > **Intelligent Resume Tailoring System** powered by **Anthropic Claude** that automatically generates ATS-optimized resumes based on job descriptions.
